@@ -7,6 +7,7 @@ begin
     gemspec.homepage = "http://github.com/techbelly/configura"
     gemspec.authors = ["Ben Griffiths"]
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install jeweler"
 end
