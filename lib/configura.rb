@@ -17,6 +17,8 @@ class Configura
     end
   end
   
+  attr_reader :file
+  
   def initialize()
     @file = "#{ENV['HOME']}/.configura"
     ensure_file_exists
@@ -25,7 +27,7 @@ class Configura
   end
   
   def ensure_file_exists
-    unless File.exists? @file
+    unless File.exists? file
       @config = {}
       save
     end
