@@ -24,8 +24,8 @@ class Configura
     load
   end
   
-  def ensure_file_exists(file)
-    unless File.exists? file
+  def ensure_file_exists
+    unless File.exists? @file
       @config = {}
       save
     end
