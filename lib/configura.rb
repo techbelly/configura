@@ -47,6 +47,11 @@ class Configura
     @config[key]
   end
   
+  def has?(key)
+    load
+    @config[key].nil? ? false : true
+  end
+  
   def []=(key, value)
     @config[key] = value
   end
